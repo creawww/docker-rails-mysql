@@ -62,7 +62,7 @@ y accedemos en el navegador a la url http://localhost:3000
 ![start_ruby_on_rails](start_ruby_on_rails.png)
 
 
-##                         ya tenemos nuestro rails corriendo!!
+                        YA TENEMOS NUESTRO RAILS CORRIENDO !!
 
 
 Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source
