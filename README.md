@@ -1,43 +1,44 @@
 # DOCKER RUBY ON RAILS WIDTH DATABASE MYSQL
 
 Un entorno docker para desarrollo de aplicaciones de Ruby on Rails con base de datos Mysql
-- rails version 5.1.4 (se puede cambiar en app/Genfile)
+- Rails version 5.1.4 (se puede cambiar en app/Gemfile)
+- Mysql version 5.7 (se puede cambiar en docker-compose.yml)
 
-## construir las imagenes de los contenedores rails
+## Construir la imagen del contenedor rails (drails)
 
     docker-compose build
 
-## arrancar contenedores
+## Arrancar contenedores
 
     docker-compose up
 
-dejamos corriendo los dos contenedores y abrimos otro terminal
+Dejamos corriendo los dos contenedores y abrimos otro terminal para ejecutar los comandos de rails console
 
 
-## crear un nuevo proyecto de Rails con mysql
+## Crear un nuevo proyecto de Rails con mysql
 
-en otro terminal ejecutar los comandos
+En el nuevo terminal ejecutar los comandos
 
     docker exec -it --user $UID:$UID drails rails new . -d mysql
 
-nos avisa que el Genfile exite que si queremo reemplazarlo Y
+nos avisa que el Gemfile exite que si queremo reemplazarlo Y
 
 ## BASE DE DATOS
 
 Configurar rails para conectar con el docker de mysql
 
-editamos el archivo app/app/config/database.yml
+editamos el archivo **app/app/config/database.yml**
 
     default: &default
       adapter: mysql2
       encoding: utf8
       pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-      **username: root**
-      **password: toor**
-      **host: db**
-      **port: 3306**
+      username: root
+      password: toor
+      host: db
+      port: 3306
 
-### crear bases de datos
+### Crear las bases de datos
 
     docker exec -it --user $UID:$UID drails rake db:create
 
@@ -61,10 +62,10 @@ y accedemos en el navegador a la url http://localhost:3000
 ![start_ruby_on_rails](start_ruby_on_rails.png)
 
 
-ya tenemos nuestro rails corriendo!!
+##                         ya tenemos nuestro rails corriendo!!
 
 
-para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source
+Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source
 
 cargamos el script 
 
