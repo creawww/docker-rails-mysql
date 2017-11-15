@@ -32,8 +32,8 @@ services:
    
     volumes:
       - ./app:/home/rails/app
+      - ./bundle:/usr/local/bundle   
 
     ports:
       - 3000:3000
     tty: true  
-

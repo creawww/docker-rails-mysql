@@ -1,18 +1,12 @@
 FROM ruby:2.3.3
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 
-
 ARG USER=rails
 RUN adduser --disabled-login ${USER}
 USER ${USER}
 RUN mkdir -p /home/${USER}/app
 
-
 VOLUME /home/${USER}/app
 WORKDIR /home/${USER}/app
 
-COPY app/Gemfile* /home/${USER}/app/
-RUN bundle install 
-
 EXPOSE 3000
-
