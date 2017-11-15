@@ -6,18 +6,18 @@ Un entorno docker para desarrollo de aplicaciones de Ruby on Rails con base de d
 
     rails-docker
 
-    - [app]                       # Directorio de persistencia para la aplicacion web   
-        - Gemfile                    # Archivo Gemfile inicial para instalación de rails
+    - **[app]**                    # Directorio de persistencia para la aplicacion web   
+        - **Gemfile**              # Archivo Gemfile inicial para instalación de rails
 
-    - [db_file]                   # Directorio de presistencia de datos Mysql
+    - **[db_file]**                # Directorio de presistencia de datos Mysql
 
-    - [bundle]                    # Directorio de persistencia de las gemas de bundler
+    - **[bundle]                   # Directorio de persistencia de las gemas de bundler
 
-    - Docker-compose.yml             # Archivo con las instrucciones del docker-compose
-    - Dockerfile56                   # Archivo Dockerfile de instalacion de ruby
-    - railsSources                   # Funciones bash para resumir instrucciones docker mediante source  
-    - README.md
-    - start_ruby_on_rails.png
+    - **Docker-compose.yml **      # Archivo con las instrucciones del docker-compose
+    - **DockerFileRails**          # Archivo Dockerfile de instalacion de ruby
+    - **railsSources**             # Funciones bash para resumir instrucciones docker mediante source  
+    - **README.md**
+    - **start_ruby_on_rails.png**
 
 
 ## Construir la imagen del contenedor rails (drails)
@@ -87,7 +87,11 @@ y accedemos en el navegador a la url http://localhost:3000
                                       YA TENEMOS NUESTRO RAILS CORRIENDO !!
 
 
-Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source, con esto podremos utilizar directamente 'rails', 'rake', 'bundle' dentro del contenedor.
+para apagar el servidor Ctrl-C
+
+## Para el trabajo con contenedores
+
+Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source, con esto podremos utilizar directamente 'rails', 'rake', 'bundle' dentro del contenedor. Hay que ejecutarlos cada vez que se abra un nuevo terminal para trabajar con el contenedor.
 
 cargamos el script 
 
@@ -95,10 +99,9 @@ cargamos el script
 
 y en este terminal ya no tenemos que poner "docker exec -it --user $UID:$UID drails", para ejecutar el servidor simplemente pondremos:
 
-    rails server
+    rails server    o    rails s
 
 ## Algunos comando de Rails
-
 
 ### Mostrar las rutas creadas
 
