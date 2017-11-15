@@ -4,14 +4,14 @@ Un entorno docker para desarrollo de aplicaciones de Ruby on Rails con base de d
 - Rails version 5.1.4 (se puede cambiar en app/Gemfile)
 - Mysql version 5.7 (se puede cambiar en docker-compose.yml)
 
-    rails-docker
+    **rails-docker**
 
     - **[app]**                    # Directorio de persistencia para la aplicacion web   
         - **Gemfile**              # Archivo Gemfile inicial para instalación de rails
 
     - **[db_file]**                # Directorio de presistencia de datos Mysql
 
-    - **[bundle]                   # Directorio de persistencia de las gemas de bundler
+    - **[bundle]**                 # Directorio de persistencia de las gemas de bundler
 
     - **Docker-compose.yml **      # Archivo con las instrucciones del docker-compose
     - **DockerFileRails**          # Archivo Dockerfile de instalacion de ruby
@@ -61,7 +61,7 @@ editamos el archivo **app/app/config/database.yml**
 
     docker exec -it --user $UID:$UID drails rake db:create
 
-Si da error, se pueden crear las tablas a mano. Accedemos al contenedor de mysql 'dbmy' y las creamos de forma manual.
+Si da ERROR, se pueden crear las tablas a mano. Accedemos al contenedor de mysql 'dbmy' y las creamos de forma manual.
 
 
     docker exec -it dbmy /bin/bash
@@ -71,7 +71,7 @@ Si da error, se pueden crear las tablas a mano. Accedemos al contenedor de mysql
 
     CREATE DATABASE app_development;
     CREATE DATABASE app_test;
-    exit:
+    exit;
 
     exit
 
