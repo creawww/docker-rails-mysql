@@ -14,7 +14,7 @@ rails(){
         rails "$@"
 }
 
-dbundle(){
+bundle(){
     docker exec -it \
         --user $UID:$UID \
         drails \

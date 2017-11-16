@@ -13,7 +13,7 @@ Un entorno docker para desarrollo de aplicaciones de Ruby on Rails con base de d
 
     - **[bundle]**                 # Directorio de persistencia de las gemas de bundler
 
-    - **Docker-compose.yml **      # Archivo con las instrucciones del docker-compose
+    - **Docker-compose.yml**       # Archivo con las instrucciones del docker-compose
     - **DockerFileRails**          # Archivo Dockerfile de instalacion de ruby
     - **railsSources**             # Funciones bash para resumir instrucciones docker mediante source  
     - **README.md**
