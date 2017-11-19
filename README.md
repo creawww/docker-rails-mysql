@@ -81,7 +81,7 @@ Si da ERROR, se pueden crear las tablas a mano. Accedemos al contenedor de mysql
 
 y accedemos en el navegador a la url http://localhost:3000
 
-![start_ruby_on_rails](start_ruby_on_rails.png)
+![start_ruby_on_rails](https://image.ibb.co/faMhA6/start_ruby_on_rails.png)
 
 
                                       YA TENEMOS NUESTRO RAILS CORRIENDO !!
