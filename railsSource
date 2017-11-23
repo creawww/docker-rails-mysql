@@ -21,3 +21,30 @@ bundle(){
         bundle "$@"
 }
 
+gem(){
+    docker exec -it \
+        --user $UID:$UID \
+        drails \
+        gem "$@"
+}
+
+ruby(){
+    docker exec -it \
+        --user $UID:$UID \
+        drails \
+        ruby "$@"
+}
+
+irb(){
+    docker exec -it \
+        --user $UID:$UID \
+        drails \
+        irb "$@"
+}
+
+rspec(){
+    docker exec -it \
+        --user $UID:$UID \
+        drails \
+        rspec "$@"
+}

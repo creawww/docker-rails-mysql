@@ -32,7 +32,7 @@ Dejamos corriendo los dos contenedores y abrimos otro terminal para ejecutar los
 
 ## Instalar Rails con Bundler a partir del Gemfile
 
-    docker exec -it --user $UID:$UID drails bundler install
+    docker exec -it --user $UID:$UID drails bundle install
 
 ## Crear un nuevo proyecto de Rails con mysql
 
@@ -91,7 +91,7 @@ para apagar el servidor Ctrl-C
 
 ## Para el trabajo con contenedores
 
-Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source, con esto podremos utilizar directamente 'rails', 'rake', 'bundle' dentro del contenedor. Hay que ejecutarlos cada vez que se abra un nuevo terminal para trabajar con el contenedor.
+Para trabajar, siempre tiene que estar corriendo en un terminal el docker-compose y en otro ejecutar los comandos, para no repetir tanto comando de docker usaremos el source, con esto podremos utilizar directamente 'rails', 'rake', 'bundle' , 'irb' , 'rspec', 'ruby' dentro del contenedor. Hay que ejecutarlos cada vez que se abra un nuevo terminal para trabajar con el contenedor.
 
 cargamos el script 
 
